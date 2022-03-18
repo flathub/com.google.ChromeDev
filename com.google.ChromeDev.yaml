@@ -2,7 +2,7 @@ app-id: com.google.ChromeDev
 runtime: org.freedesktop.Platform
 runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
-base: com.google.Chrome.BaseApp
+base: org.chromium.Chromium.BaseApp
 base-version: '21.08'
 command: chrome
 separate-locales: false
