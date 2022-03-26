@@ -64,6 +64,32 @@ modules:
       - type: patch
         path: dconf-override.patch
 
+  - name: cobalt
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://github.com/refi64/cobalt
+        tag: v2022.03beta.1
+        commit: bb1814f7ee12ff68a870bfb1f772261e06aa997e
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\d.]+(?:beta[\d.]+?))$
+      # - type: dir
+      #   path: /var/home/ryan/code/cobalt
+
+  - name: flextop
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://github.com/refi64/flextop
+        tag: v2022.03beta.1
+        commit: 83c73e435630b94a6f44abe67cb268eae5b229b4
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\d.]+(?:beta[\d.]+?))$
+      # - type: dir
+      #   path: /var/home/ryan/code/flextop
+
   - name: zypak
     sources:
       - type: git
