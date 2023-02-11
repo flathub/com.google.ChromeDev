@@ -70,8 +70,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/refi64/cobalt
-        tag: v2022.03beta.1
-        commit: bb1814f7ee12ff68a870bfb1f772261e06aa997e
+        tag: v2023.02beta.1
+        commit: 99fd12a318acd3d169ab491a051353258fd0e72a
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+(?:beta[\d.]+?))$
@@ -95,8 +95,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/refi64/zypak
-        tag: v2022.03beta.1
-        commit: 8424c6bcf909ca2031ebc6537d324bb64772266e
+        tag: v2023.02beta.1
+        commit: 64f6ccfdfd223cc2d2d68608ef42b8ff2fd6400e
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+(?:beta[\d.]+?))$
