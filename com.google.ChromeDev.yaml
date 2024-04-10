@@ -119,7 +119,7 @@ modules:
       # For extra-data to be able to extract the .deb
       - install -Dm 755 /{usr,app}/bin/ar
       - cp /usr/lib/$(gcc --print-multiarch)/libbfd-*.so /app/lib
-      - cp -a /usr/lib/$(gcc --print-multiarch)/libsframe.so* ${FLATPAK_DEST}/lib
+      - cp -a /usr/lib/$(gcc --print-multiarch)/libsframe.so* /app/lib
     sources:
       - type: extra-data
         # From https://dl.google.com/linux/chrome/deb/dists/stable/main/binary-amd64/Packages
