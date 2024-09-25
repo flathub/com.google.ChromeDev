@@ -1,9 +1,9 @@
 app-id: com.google.ChromeDev
 runtime: org.freedesktop.Platform
-runtime-version: '22.08'
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 base: org.chromium.Chromium.BaseApp
-base-version: '22.08'
+base-version: '23.08'
 command: chrome
 separate-locales: false
 build-options:
@@ -115,10 +115,6 @@ modules:
         for icon in 16 24 32 48 64 128 256; do
           install -Dm 644 $FLATPAK_ID-$icon.png /app/share/icons/hicolor/${icon}x${icon}/apps/$FLATPAK_ID.png
         done
-
-      # For extra-data to be able to extract the .deb
-      - install -Dm 755 /{usr,app}/bin/ar
-      - cp /usr/lib/$(gcc --print-multiarch)/libbfd-*.so /app/lib
     sources:
       - type: extra-data
         # From https://dl.google.com/linux/chrome/deb/dists/stable/main/binary-amd64/Packages
