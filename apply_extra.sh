@@ -1,6 +1,11 @@
 #!/usr/bin/sh
-ar x chrome.deb data.tar.xz
+set -e
+
+bsdtar -Oxf chrome.deb data.tar.xz |
+  bsdtar -xf - \
+    --strip-components=4 \
+    --exclude='./opt/google/chrome-unstable/nacl*' \
+    ./opt/google/chrome-unstable
 rm chrome.deb
-tar -xf data.tar.xz --strip-components=4 ./opt/google/chrome-unstable
-rm data.tar.xz nacl*
-cp /app/bin/stub_sandbox chrome-sandbox
+
+install -Dm 755 /app/bin/stub_sandbox chrome-sandbox
