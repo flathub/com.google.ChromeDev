@@ -118,9 +118,9 @@ modules:
     sources:
       - type: extra-data
         # From https://dl.google.com/linux/chrome/deb/dists/stable/main/binary-amd64/Packages
-        url: https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-unstable/google-chrome-unstable_135.0.7012.4-1_amd64.deb
-        sha256: ebaa76ebbc317c892d5a369512da848bdc07e1304d60d55735e85c5716a2655c
-        size: 114558872
+        url: https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-unstable/google-chrome-unstable_135.0.7023.0-1_amd64.deb
+        sha256: 7f1cac84a8499df51e701b8b19306b4eb859bec23974d77077f99ee137365286
+        size: 115005940
         filename: chrome.deb
         only-arches: [x86_64]
         x-checker-data:
