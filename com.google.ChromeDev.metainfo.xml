@@ -10,11 +10,11 @@
   <project_license>LicenseRef-proprietary</project_license>
   <url type="homepage">https://chrome.google.com/</url>
   <description>
+    <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by Google.**</p>
     <p>
     Google Chrome is a browser that combines a minimal design with sophisticated technology to make the web faster,
     safer, and easier.
     </p>
-    <p>NOTE: This wrapper is not verified by, affiliated with, or supported by Google.</p>
   </description>
   <screenshots>
     <screenshot type="default">
