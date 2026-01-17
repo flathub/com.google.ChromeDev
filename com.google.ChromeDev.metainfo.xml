@@ -1,24 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2017 the Chromium authors, with modifications -->
-<component type="desktop">
+<component type="desktop-application">
   <id>com.google.ChromeDev</id>
   <launchable type="desktop-id">com.google.ChromeDev.desktop</launchable>
   <name>Google Chrome (unstable)</name>
-  <developer_name>Google</developer_name>
-  <summary>The web browser from Google</summary>
+  <developer id="com.google">
+    <name>Google</name>
+  </developer>
+  <summary>The browser built to be yours</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
   <url type="homepage">https://chrome.google.com/</url>
+  <content_rating type="oars-1.1"/>
+  <update_contact>rymg19_at_gmail.com</update_contact>
   <description>
-    <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by Google.**</p>
-    <p>
-    Google Chrome is a browser that combines a minimal design with sophisticated technology to make the web faster,
-    safer, and easier.
-    </p>
+    <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by Google.**</p>    
+    <p>Google Chrome is a browser that combines a minimal design with sophisticated technology to make the web faster, safer, and easier.</p>
   </description>
   <screenshots>
     <screenshot type="default">
-      <image>https://www.gstatic.com/chrome/appstream/chrome-2.png</image>
+      <image>https://www.google.com/chrome/static/images/dev-components/chrome-gallery-1.webp</image>
+    </screenshot>
+    <screenshot>
+      <image>https://www.google.com/chrome/static/images/dev-components/chrome-gallery-3.webp</image>
+    </screenshot>
+    <screenshot>
+      <image>https://www.google.com/chrome/static/images/dev-components/chrome-gallery-5.webp</image>
     </screenshot>
   </screenshots>
   <releases>
@@ -38,6 +45,4 @@
       <description/>
     </release>
   </releases>
-  <content_rating type="oars-1.1"/>
-  <update_contact>rymg19_at_gmail.com</update_contact>
 </component>
