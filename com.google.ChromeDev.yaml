@@ -1,9 +1,9 @@
 app-id: com.google.ChromeDev
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 base: org.chromium.Chromium.BaseApp
-base-version: '23.08'
+base-version: '25.08'
 command: chrome
 separate-locales: false
 build-options:
@@ -16,6 +16,7 @@ finish-args:
   - --share=ipc
   - --share=network
   - --socket=cups
+  - --socket=pcsc # FIDO2
   - --socket=pulseaudio
   - --socket=x11
   - --socket=wayland
@@ -24,13 +25,20 @@ finish-args:
   - --system-talk-name=org.freedesktop.UPower
   - --talk-name=org.freedesktop.FileManager1
   - --talk-name=org.freedesktop.Notifications
+  - --talk-name=org.freedesktop.ScreenSaver
   - --talk-name=org.freedesktop.secrets
   - --talk-name=org.gnome.SessionManager
+  - --talk-name=org.kde.StatusNotifierWatcher
   - --system-talk-name=org.freedesktop.Avahi
   - --own-name=org.mpris.MediaPlayer2.chromium.*
   - --filesystem=/run/.heim_org.h5l.kcm-socket
   - --filesystem=host-etc
+  - --filesystem=xdg-run/pipewire-0
+  - --filesystem=xdg-documents
   - --filesystem=xdg-download
+  - --filesystem=xdg-music
+  - --filesystem=xdg-videos
+  - --filesystem=xdg-pictures
   # For GNOME proxy resolution
   - --filesystem=xdg-run/dconf
   - --filesystem=~/.config/dconf:ro
@@ -66,41 +74,15 @@ modules:
       - type: patch
         path: dconf-override.patch
 
-  - name: cobalt
-    buildsystem: meson
-    sources:
-      - type: git
-        url: https://github.com/refi64/cobalt
-        tag: v2023.02beta.1
-        commit: 99fd12a318acd3d169ab491a051353258fd0e72a
-        x-checker-data:
-          type: git
-          tag-pattern: ^v([\d.]+(?:beta[\d.]+?))$
-      # - type: dir
-      #   path: /var/home/ryan/code/cobalt
-
-  - name: flextop
-    buildsystem: meson
-    sources:
-      - type: git
-        url: https://github.com/refi64/flextop
-        tag: v2022.03beta.1
-        commit: 83c73e435630b94a6f44abe67cb268eae5b229b4
-        x-checker-data:
-          type: git
-          tag-pattern: ^v([\d.]+(?:beta[\d.]+?))$
-      # - type: dir
-      #   path: /var/home/ryan/code/flextop
-
   - name: zypak
     sources:
       - type: git
         url: https://github.com/refi64/zypak
-        tag: v2023.02beta.1
-        commit: 64f6ccfdfd223cc2d2d68608ef42b8ff2fd6400e
+        tag: v2025.09
+        commit: 693a71c5ffa80ec9c9ce2ae03b1ccc493c698e53
         x-checker-data:
           type: git
-          tag-pattern: ^v([\d.]+(?:beta[\d.]+?))$
+          tag-pattern: ^v([\d.]+)$
 
   - name: chrome
     buildsystem: simple
@@ -111,10 +93,7 @@ modules:
       - install -Dm 644 -t /app/etc cobalt.ini
       - install -Dm 644 -t /app/share/applications $FLATPAK_ID.desktop
       - install -Dm 644 -t /app/share/metainfo $FLATPAK_ID.metainfo.xml
-      - |
-        for icon in 16 24 32 48 64 128 256; do
-          install -Dm 644 $FLATPAK_ID-$icon.png /app/share/icons/hicolor/${icon}x${icon}/apps/$FLATPAK_ID.png
-        done
+      - install -Dm 644 -t /app/share/icons/hicolor/scalable/apps/ com.google.ChromeDev.svg
     sources:
       - type: extra-data
         # From https://dl.google.com/linux/chrome/deb/dists/stable/main/binary-amd64/Packages
@@ -146,16 +125,4 @@ modules:
       - type: file
         path: com.google.ChromeDev.metainfo.xml
       - type: file
-        path: icons/com.google.ChromeDev-16.png
-      - type: file
-        path: icons/com.google.ChromeDev-24.png
-      - type: file
-        path: icons/com.google.ChromeDev-32.png
-      - type: file
-        path: icons/com.google.ChromeDev-48.png
-      - type: file
-        path: icons/com.google.ChromeDev-64.png
-      - type: file
-        path: icons/com.google.ChromeDev-128.png
-      - type: file
-        path: icons/com.google.ChromeDev-256.png
+        path: com.google.ChromeDev.svg
