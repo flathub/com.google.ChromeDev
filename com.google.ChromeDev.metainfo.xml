@@ -29,8 +29,41 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="147.0.7719.3-1" date="2026-03-06">
+    <release version="150.0.7846.4-1" date="2026-05-21">
       <description></description>
+    </release>
+    <release version="150.0.7838.0-1" date="2026-05-14">
+      <description/>
+    </release>
+    <release version="150.0.7828.2-1" date="2026-05-07">
+      <description/>
+    </release>
+    <release version="149.0.7815.2-1" date="2026-04-30">
+      <description/>
+    </release>
+    <release version="149.0.7808.0-1" date="2026-04-24">
+      <description/>
+    </release>
+    <release version="149.0.7795.2-1" date="2026-04-17">
+      <description/>
+    </release>
+    <release version="149.0.7779.3-1" date="2026-04-09">
+      <description/>
+    </release>
+    <release version="148.0.7766.3-1" date="2026-04-02">
+      <description/>
+    </release>
+    <release version="148.0.7753.0-1" date="2026-03-26">
+      <description/>
+    </release>
+    <release version="148.0.7743.0-1" date="2026-03-24">
+      <description/>
+    </release>
+    <release version="148.0.7730.2-1" date="2026-03-14">
+      <description/>
+    </release>
+    <release version="147.0.7719.3-1" date="2026-03-06">
+      <description/>
     </release>
     <release version="147.0.7703.0-1" date="2026-02-26">
       <description/>
