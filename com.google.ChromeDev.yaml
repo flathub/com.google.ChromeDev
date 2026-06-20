@@ -93,7 +93,7 @@ modules:
       - install -Dm 644 -t /app/etc cobalt.ini
       - install -Dm 644 -t /app/share/applications $FLATPAK_ID.desktop
       - install -Dm 644 -t /app/share/metainfo $FLATPAK_ID.metainfo.xml
-      - install -Dm 644 -t /app/share/icons/hicolor/scalable/apps/ com.google.ChromeDev.svg
+      - install -Dm 644 -t /app/share/icons/hicolor/256x256/apps/ com.google.ChromeDev.png
     sources:
       - type: extra-data
         # From https://dl.google.com/linux/chrome/deb/dists/stable/main/binary-amd64/Packages
@@ -125,4 +125,4 @@ modules:
       - type: file
         path: com.google.ChromeDev.metainfo.xml
       - type: file
-        path: com.google.ChromeDev.svg
+        path: com.google.ChromeDev.png
