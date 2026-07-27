@@ -109,6 +109,20 @@ modules:
           component: main
           package-name: google-chrome-unstable
           is-main-source: true
+      - type: extra-data
+        # From https://dl.google.com/linux/chrome/deb/dists/stable/main/binary-arm64/Packages
+        url: https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-unstable/google-chrome-unstable_152.0.7967.2-1_arm64.deb
+        sha256: b27b604f927e0911092b911c631724b52add4d1acf2908387ed38e1161a89a50
+        size: 132559408
+        filename: chrome.deb
+        only-arches: [aarch64]
+        x-checker-data:
+          type: debian-repo
+          root: https://dl.google.com/linux/chrome/deb
+          dist: stable
+          component: main
+          package-name: google-chrome-unstable
+          is-main-source: true
       - type: script
         dest-filename: stub_sandbox.sh
         commands:
