@@ -97,9 +97,9 @@ modules:
     sources:
       - type: extra-data
         # From https://dl.google.com/linux/chrome/deb/dists/stable/main/binary-amd64/Packages
-        url: https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-unstable/google-chrome-unstable_156.0.8063.3-1_amd64.deb
-        sha256: 614d02600ac63b71ec2fc07dbf44e818aa8115f508a219b4432777face787472
-        size: 143651480
+        url: https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-unstable/google-chrome-unstable_156.0.8072.0-1_amd64.deb
+        sha256: 492cd014a7a9479a82a35e3f6cb859aa58cc66a494ae417c3a5633aece8f64ba
+        size: 144573000
         filename: chrome.deb
         only-arches: [x86_64]
         x-checker-data:
@@ -111,9 +111,9 @@ modules:
           is-main-source: true
       - type: extra-data
         # From https://dl.google.com/linux/chrome/deb/dists/stable/main/binary-arm64/Packages
-        url: https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-unstable/google-chrome-unstable_156.0.8063.3-1_arm64.deb
-        sha256: a913fc946d37612273958965c4ac6b5a02c00d6cfc3b436763393b7b8885aa5a
-        size: 135866780
+        url: https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-unstable/google-chrome-unstable_156.0.8072.0-1_arm64.deb
+        sha256: 02a8ea489b8b868b6b8d1a3a51651b40dd3a2ff21931b9289c4c949628c50c03
+        size: 136466616
         filename: chrome.deb
         only-arches: [aarch64]
         x-checker-data:
